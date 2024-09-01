@@ -8,7 +8,7 @@ Example Script Overview
 In our example, we have a Python script that demonstrates the use of argparse to parse command-line arguments related to a person's name and age. The script will format and display a message based on the provided arguments.
 
 Here’s the script:
-```commandline
+```python
 import argparse
 
 parser = argparse.ArgumentParser(description='Example script.', allow_abbrev=False)
@@ -45,14 +45,14 @@ parser = argparse.ArgumentParser(description='Example script.', allow_abbrev=Fal
 ```
 The ArgumentParser object is created with a description of the script. The allow_abbrev=False parameter ensures that arguments must be specified fully and not abbreviated.
 2. #### Adding Arguments:
-```commandline
+```python
 parser.add_argument('-n', '--name', type=str, help='Your first name.')
 parser.add_argument('-f', '--family', type=str, help='Your family name.')
 parser.add_argument('-a', '--age', type=int, help='Your age.')
 ```
 We define three optional arguments: --name, --family, and --age. Each argument is associated with a help description and type.
 3. #### Parsing Arguments:
-```commandline
+```python
 try:
     args = parser.parse_args()
 except SystemExit:
@@ -61,7 +61,7 @@ except SystemExit:
 ```
 We use `parse_args()` to process command-line inputs. If invalid arguments are provided, a `SystemExit` exception is caught, and an error message is printed.
 4. #### Generating Output:
-```commandline
+```python
 output = (
     f'I am {args.name} {args.family}, I am {args.age} years old.' if args.name and args.family and args.age else
     f'I am {args.name} {args.family}.' if args.name and args.family and not args.age else

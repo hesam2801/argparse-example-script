@@ -40,7 +40,7 @@ print(output)
 - Outputs a formatted string based on the provided arguments.
 ## How It Works
 1. #### ArgumentParser Initialization:
-```
+```python
 parser = argparse.ArgumentParser(description='Example script.', allow_abbrev=False)
 ```
 The ArgumentParser object is created with a description of the script. The allow_abbrev=False parameter ensures that arguments must be specified fully and not abbreviated.

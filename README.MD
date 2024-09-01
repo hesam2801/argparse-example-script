@@ -50,7 +50,7 @@ parser.add_argument('-n', '--name', type=str, help='Your first name.')
 parser.add_argument('-f', '--family', type=str, help='Your family name.')
 parser.add_argument('-a', '--age', type=int, help='Your age.')
 ```
-We define three optional arguments: --name, --family, and --age. Each argument is associated with a help description and type.
+We define three optional arguments: `--name`, `--family`, and `--age`. Each argument is associated with a help description and type.
 3. #### Parsing Arguments:
 ```python
 try:
